@@ -1,0 +1,39 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, hsla(203, 100%, 50%, 0.494), 
+    hsla(185, 100%, 50%, 0.119));
+}
+
+.wrapper {
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+h1 {
+    margin-bottom: 4vh;
+}
+
+/* buttons */
+.genre {
+    display: inline;
+    font-size: 25px;
+    border: 2px solid black;
+    padding: 10px;
+    /* margin-top: 1vh; */
+    min-width: 7vw;
+    max-width: fit-content;
+   
+}
+
+.genre:hover {
+    background-color: #fff;
+}
+
+/* div */
+
+.display-books {
+    font-size: 25px;
+}
