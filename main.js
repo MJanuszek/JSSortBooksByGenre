@@ -94,21 +94,37 @@ const addNewBook = (e) => {
     genre = genreInput.value
     allBooks.push({name:title, genre:genre})
     console.log(allBooks);
-
-
-     newAdditionDisplay.textContent = `New book added: ${allBooks}`;
-
-    // newAdditionDisplay.textContent = `New book added: ${allBooks.length-1.[i]}`;
+    // display content of last index of array allBooks::
+    newAdditionDisplay.textContent = `New book added: Title "${allBooks[allBooks.length-1].name}" Genre: ${allBooks[allBooks.length-1].genre} `;
 
     // end addNewBook()
 }
 
-
-
-
 addButton.addEventListener("click", addNewBook);
 
+// Display all books from collection:
 
+const showAllButton = document.querySelector(".show-all");
+const displayAllBooksDiv = document.querySelector(".collection");
+let allTitles = [];
+
+const showBooksCollection = function() {
+    
+    for (let i = 0; i<allBooks.length; i++){
+        
+        // allTitles.push(allBooks[i].name);
+        
+        displayAllBooksDiv.textContent += `${allBooks[i].name}`;
+        
+     
+    }
+    // displayAllBooksDiv.textContent = allTitles;
+    // displayAllBooksDiv.textContent = allTitles;
+
+
+}
+
+showAllButton.addEventListener("click", showBooksCollection)
 
 
 // let inputTitle = document.querySelector(".title").addEventListener("input", (e) => {

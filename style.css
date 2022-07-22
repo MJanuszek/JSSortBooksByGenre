@@ -17,7 +17,7 @@ h1 {
 }
 
 /* buttons */
-.genre, .title, .book-genre {
+.genre, .title, .book-genre, .show-all {
     display: inline;
     font-size: 25px;
     border: 2px solid black;
@@ -34,7 +34,11 @@ h1 {
 
 /* div */
 
-.display-books, .new-addition {
+.display-books, .new-addition, .collection {
     font-size: 35px;
     margin-top: 2vh;
+}
+
+.show-all {
+    margin-top: 10vh;
 }
