@@ -5,19 +5,19 @@ const displayBooksDiv = document.querySelector(".display-books");
 
 const allBooks = [
     {
-        name: "The Man Who Died Twice",
+        name: " The Man Who Died Twice",
         genre: "crime"
     },
     {
-        name: "The Thursday Murder Club",
+        name: " The Thursday Murder Club",
         genre: "crime"
     },
     {
-        name: "Love on the Brain",
+        name: " Love on the Brain",
         genre: "romance"
     },
     {
-        name: "Fake It Till You Bake It",
+        name: " Fake It Till You Bake It",
         genre: "romance"
     }
 ];
@@ -73,9 +73,47 @@ const displayBooks = (e) => {
         
     }
 
-
-
     // end displayBooks()
 }
 extractGenre(allBooks);
 buttons.forEach(button => button.addEventListener("click", displayBooks));
+
+// Adding new book:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+let title = "";
+let genre = "";
+
+const addButton = document.querySelector(".add-new");
+const titleInput = document.querySelector(".title");
+const genreInput = document.querySelector(".book-genre");
+const newAdditionDisplay = document.querySelector(".new-addition")
+
+
+const addNewBook = (e) => {
+    title = titleInput.value;
+    genre = genreInput.value
+    allBooks.push({name:title, genre:genre})
+    console.log(allBooks);
+
+
+     newAdditionDisplay.textContent = `New book added: ${allBooks}`;
+
+    // newAdditionDisplay.textContent = `New book added: ${allBooks.length-1.[i]}`;
+
+    // end addNewBook()
+}
+
+
+
+
+addButton.addEventListener("click", addNewBook);
+
+
+
+
+// let inputTitle = document.querySelector(".title").addEventListener("input", (e) => {
+//     //     title = e.target.value;
+//     // })
+    
+//     // }
+    
