@@ -1,7 +1,6 @@
 
 const buttons = document.querySelectorAll(".genre");
 const displayBooksDiv = document.querySelector(".display-books");
-// displayBooksDiv.textContent = "ok"
 
 const allBooks = [
     {
@@ -111,25 +110,11 @@ let allTitles = [];
 const showBooksCollection = function() {
     
     for (let i = 0; i<allBooks.length; i++){
-        
-        // allTitles.push(allBooks[i].name);
-        
-        displayAllBooksDiv.textContent += `${allBooks[i].name}`;
-        
+          
+        displayAllBooksDiv.textContent += `${allBooks[i].name}`; 
      
     }
-    // displayAllBooksDiv.textContent = allTitles;
-    // displayAllBooksDiv.textContent = allTitles;
-
-
+   
 }
 
 showAllButton.addEventListener("click", showBooksCollection)
-
-
-// let inputTitle = document.querySelector(".title").addEventListener("input", (e) => {
-//     //     title = e.target.value;
-//     // })
-    
-//     // }
-    
